@@ -2,12 +2,18 @@
 
 #body {
     margin: none;
+    font-family: "Space Mono", monospace;
 }
 #topbar {
     background-color: black;
     color: white;
-    font-family: "Space Mono", monospace;
 }
 #topbar-text {
     margin-bottom: 5px 2px 5px 2px;
+}
+.project {
+    padding: 5px;
+    display: inline-block;
+    border: 2px black solid;
+    margin: 2px;
 }
