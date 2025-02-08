@@ -4,12 +4,15 @@
 
 a {
     text-decoration: none;
+}
+
+#second a {
     color: rgb(156, 194, 250);
     transition: .5s color;
     transition: .5s text-decoration;
 }
 
-a:hover {
+#second a:hover {
     text-decoration: underline;
     color: rgb(133, 173, 233);
 }
