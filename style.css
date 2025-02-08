@@ -127,7 +127,8 @@ body {
     transform: translateX(-50%);
     bottom: 2vw;
     font-size: 1.25vw;
-    animation: animate3 1s;
+    opacity: 0%;
+    animation: animate3 1s forwards;
     animation-delay: 3.25s;
     color: rgb(233, 233, 233);
 }
