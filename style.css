@@ -93,7 +93,7 @@ body {
 
 @keyframes animate2 {
     0% {
-        color: white;
+        color: rgb(233, 233, 233);
     }
     100% {
         color: rgb(130, 212, 164);
@@ -129,6 +129,7 @@ body {
     font-size: 1.25vw;
     animation: animate3 1s;
     animation-delay: 3.25s;
+    color: rgb(233, 233, 233);
 }
 
 #icons > i {
