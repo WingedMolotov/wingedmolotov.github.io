@@ -126,7 +126,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     bottom: 2vw;
-    font-size: 2vw;
+    font-size: calc(25px + 1.25vw);
     opacity: 0%;
     animation: animate3 1s forwards;
     animation-delay: 3.25s;
