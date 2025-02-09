@@ -42,14 +42,14 @@ body {
 }
 
 #first {
-    font-size: calc(30px + .65vw);
+    font-size: calc(50px + .35vw);
     animation: animate 2.25s;
     top: 2vw;
     position: relative;
 }
 
 #second {
-    font-size: calc(20px + .55vw);
+    font-size: calc(35px + .25vw);
     opacity: 0%;
     animation: animate3 1s;
     animation-delay: 2.25s;
@@ -116,9 +116,6 @@ body {
     0% {
         rotate: 0deg;
     }
-    50% {
-        rotate: 180deg;
-    }
     100% {
         rotate: 360deg;
     }
@@ -129,17 +126,17 @@ body {
     left: 50%;
     transform: translateX(-50%);
     bottom: 2vw;
-    font-size: 1.25vw;
+    font-size: 2vw;
     opacity: 0%;
     animation: animate3 1s forwards;
     animation-delay: 3.25s;
-    color: rgb(233, 233, 233);
 }
 
 #icons i {
     margin-right: .5vw;
     margin-left: .5vw;
     transition: 1.5s color;
+    color: rgb(233, 233, 233);
 }
 
 #icons i:hover {
