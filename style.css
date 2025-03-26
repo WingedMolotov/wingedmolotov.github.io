@@ -6,7 +6,6 @@
 
 body {
     font-family: "Lato", sans-serif;
-    overflow: hidden;
     color: white;
     background-color: var(--dark-slate);
     margin: 0;
@@ -27,7 +26,8 @@ header {
     padding-right: 2vmax;
     margin: 0;
     backdrop-filter: blur(2px);
-    transition: .25s backdrop-filter;
+    transition-delay: .3s;
+    transition: 1s backdrop-filter;
 }
 
 h1 {
@@ -47,9 +47,8 @@ h1 {
     transition-delay: .3s;
 }
 
-#header-container:hover:not(:has(*:hover)) header {
+#header-container:hover header {
     backdrop-filter: blur(0px);
-    transition-delay: .3s;
 }
 
 #cool-line-thing {
@@ -145,7 +144,7 @@ p {
     content: "";
     display: block;
     position: absolute;
-    width: 100%; height: 100%;
+    width: 105%; height: 105%;
     top: 0;
     left: 0;
     animation: backdrop-change-reversed 1s forwards;
