@@ -94,7 +94,7 @@ h2 {
 
 .project {
     width: 20vw;
-    display: inline-block;
+    display: block;
     padding: .42vw;
     border-radius: 5px;
     overflow: hidden;
