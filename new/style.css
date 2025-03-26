@@ -104,7 +104,7 @@ h3 {
 }
 
 #p1 {
-    background-image: url(../images/ImpactGREEN.png);
+    background-image: url("../images/ImpactGREEN.png");
     background-size: cover;
     position: relative;
 }
@@ -123,4 +123,36 @@ h3 {
 #p1 > p {
     z-index: 1;
     position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes cool-rotation {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+#icons {
+    position: absolute;
+    left: 2vw;
+    bottom: 2vw;
+    font-size: calc(25px + .75vw);
+}
+
+#icons i {
+    margin-right: .5vw;
+    margin-left: .5vw;
+    transition: 1.5s color;
+    color: rgb(233, 233, 233);
+}
+
+#icons i:hover {
+    color: var(--fire-red);
+    animation: cool-rotation 1s forwards;
 }
