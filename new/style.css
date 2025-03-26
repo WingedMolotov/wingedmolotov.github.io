@@ -165,7 +165,7 @@ a {
     color: white;
 }
 
-#icons i:hover {
+.project i:hover {
     color: var(--fire-red);
     animation: cool-rotation 1s forwards;
 }
