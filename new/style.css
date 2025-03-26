@@ -99,6 +99,8 @@ h2 {
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: .75vw
+    background-size: cover;
+    position: relative;
 }
 
 h3 {
@@ -108,11 +110,9 @@ h3 {
 
 #p1 {
     background-image: url("../images/ImpactGREEN.png");
-    background-size: cover;
-    position: relative;
 }
 
-#p1::after {
+.project::after {
     backdrop-filter: blur(4px);
     content: "";
     display: block;
@@ -122,8 +122,8 @@ h3 {
     left: 0;
 }
 
-#p1 > h3,
-#p1 > p {
+.project > h3,
+.project > p {
     z-index: 1;
     position: relative;
 }
