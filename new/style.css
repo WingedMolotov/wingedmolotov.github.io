@@ -158,3 +158,14 @@ a {
     color: var(--fire-red);
     animation: cool-rotation 1s forwards;
 }
+
+.project i {
+    margin-right: .5vw;
+    margin-left: .5vw;
+    transition: 1.5s color;
+}
+
+#icons i:hover {
+    color: var(--fire-red);
+    animation: cool-rotation 1s forwards;
+}
