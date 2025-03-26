@@ -1,6 +1,7 @@
 :root {
     --fire-red: rgb(216, 79, 45);
     --dark-slate: rgb(44, 45, 46);
+    --snow-blue: rgb(160, 182, 226);
 }
 
 body {
@@ -20,10 +21,10 @@ a {
 }
 
 header {
-    padding-left: 2vw;
-    padding-top: 1.5vw;
-    padding-bottom: 3.5vw;
-    padding-right: 2vw;
+    padding-left: 2vmax;
+    padding-top: 1.5vmax;
+    padding-bottom: 3.5vmax;
+    padding-right: 2vmax;
     margin: 0;
     backdrop-filter: blur(2px);
     transition: .25s backdrop-filter;
@@ -31,7 +32,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: calc(35px + .5vw);
+    font-size: calc(35px + .5vmax);
 }
 
 #header-container {
@@ -40,13 +41,13 @@ h1 {
     transition: .3s;
 }
 
-#header-container:hover {
+#header-container:hover:not(:has(*:hover)) {
     background-position: 0% 20%;
     transition: background-position 3s cubic-bezier(.075, .82, .165, 1);
     transition-delay: .3s;
 }
 
-#header-container:hover header {
+#header-container:hover:not(:has(*:hover)) header {
     backdrop-filter: blur(0px);
     transition-delay: .3s;
 }
@@ -65,13 +66,13 @@ h1 {
 
 #aboutme {
     margin: 0;
-    margin-left: 2vw;
-    margin-top: 1.5vw;
+    margin-left: 2vmax;
+    margin-top: 1.5vmax;
 }
 
 #aboutme > h2 {
     margin: 0;
-    margin-bottom: .5vw;
+    margin-bottom: .5vmax;
 }
 
 p {
@@ -79,33 +80,33 @@ p {
 }
 
 h2 {
-    font-size: calc(22px + .125vw);
+    font-size: calc(22px + .125vmax);
 }
 
 #projects-container {
-    margin-left: 2vw;
-    margin-top: 1.5vw;
+    margin-left: 2vmax;
+    margin-top: 1.5vmax;
 }
 
 #projects-container > h2 {
     margin: 0;
-    margin-bottom: .5vw;
+    margin-bottom: .5vmax;
 }
 
 .project {
-    width: 20vw;
+    width: 20vmax;
     display: block;
-    padding: .65vw;
+    padding: .65vmax;
     border-radius: 5px;
     overflow: hidden;
-    margin-bottom: .75vw
+    margin-bottom: .75vmax;
     background-size: cover;
     position: relative;
 }
 
 h3 {
     margin: 0;
-    margin-bottom: 0.5vw;
+    margin-bottom: .5vmax;
 }
 
 #p1 {
@@ -120,14 +121,33 @@ h3 {
     background-image: url("../images/southtown.jpg");
 }
 
+.project a {
+    color: var(--snow-blue);
+}
+
+@keyframes backdrop-change {
+    from { backdrop-filter: brightness(70%) blur(4px); }
+    to { backdrop-filter: brightness(80%) blur(0px); }
+}
+
+@keyframes backdrop-change-reversed {
+    from { backdrop-filter: brightness(80%) blur(0px); }
+    to { backdrop-filter: brightness(70%) blur(4px); }
+}
+
 .project::after {
-    backdrop-filter: blur(4px);
+    backdrop-filter: brightness(70%) blur(4px);
     content: "";
     display: block;
     position: absolute;
     width: 100%; height: 100%;
     top: 0;
     left: 0;
+    animation: backdrop-change-reversed 1s forwards;
+}
+
+.project:hover::after {
+    animation: backdrop-change 1s forwards;
 }
 
 .project > h3,
@@ -140,36 +160,28 @@ a {
     text-decoration: none;
 }
 
-@keyframes cool-rotation {
-    0% {
-        rotate: 0deg;
-    }
-    100% {
-        rotate: 360deg;
-    }
-}
-
 #icons {
     position: absolute;
-    right: 2vw;
-    bottom: 2vw;
-    font-size: calc(20px + .5vw);
+    right: 2vmax;
+    top: 2vmax;
+    font-size: calc(20px + .5vmax);
 }
 
 #icons i {
-    margin-right: .5vw;
-    margin-left: .5vw;
+    margin-right: .5vmax;
+    margin-left: .5vmax;
     transition: 1.5s color;
     color: white;
+    transition: transform 1s;
 }
 
 #icons i:hover {
     color: var(--fire-red);
-    animation: cool-rotation 1s forwards;
+    transform: rotate(360deg);
 }
 
 .project i {
-    margin-left: .5vw;
+    margin-left: .5vmax;
     transition: 1.5s color;
     color: white;
 }
@@ -177,4 +189,10 @@ a {
 .project i:hover {
     color: var(--fire-red);
     animation: cool-rotation 1s forwards;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: calc(70px + .5vmax);
+    }
 }
