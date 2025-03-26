@@ -112,6 +112,14 @@ h3 {
     background-image: url("../images/ImpactGREEN.png");
 }
 
+#p2 {
+    background-image: url("../images/bikeparkmap.png");
+}
+
+#p3 {
+    background-image: url("../images/southtown.jpg");
+}
+
 .project::after {
     backdrop-filter: blur(4px);
     content: "";
