@@ -89,7 +89,7 @@ h2 {
 
 #projects-container > h2 {
     margin: 0;
-    margin-bottom: 0.5vw;
+    margin-bottom: .5vw;
 }
 
 .project {
@@ -98,6 +98,7 @@ h2 {
     padding: .65vw;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: .75vw
 }
 
 h3 {
