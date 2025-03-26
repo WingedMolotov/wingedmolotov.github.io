@@ -32,7 +32,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: calc(35px + .5vmax);
+    font-size: calc(45px + .5vmax);
 }
 
 #header-container {
@@ -80,7 +80,7 @@ p {
 }
 
 h2 {
-    font-size: calc(22px + .125vmax);
+    font-size: calc(23px + .5vmax);
 }
 
 #projects-container {
@@ -107,6 +107,11 @@ h2 {
 h3 {
     margin: 0;
     margin-bottom: .5vmax;
+    font-size: calc(20px + .25vw);
+}
+
+p {
+    font-size: calc(16px + .125vw);
 }
 
 #p1 {
@@ -126,17 +131,17 @@ h3 {
 }
 
 @keyframes backdrop-change {
-    from { backdrop-filter: brightness(70%) blur(4px); }
+    from { backdrop-filter: brightness(65%) blur(4px); }
     to { backdrop-filter: brightness(80%) blur(0px); }
 }
 
 @keyframes backdrop-change-reversed {
-    from { backdrop-filter: brightness(80%) blur(0px); }
+    from { backdrop-filter: brightness(65%) blur(0px); }
     to { backdrop-filter: brightness(70%) blur(4px); }
 }
 
 .project::after {
-    backdrop-filter: brightness(70%) blur(4px);
+    backdrop-filter: brightness(65%) blur(4px);
     content: "";
     display: block;
     position: absolute;
@@ -164,7 +169,7 @@ a {
     position: absolute;
     right: 2vmax;
     top: 2vmax;
-    font-size: calc(20px + .5vmax);
+    font-size: calc(45px + .5vmax);
 }
 
 #icons i {
@@ -183,16 +188,11 @@ a {
 .project i {
     margin-left: .5vmax;
     transition: 1.5s color;
+    transition: 1s transform;
     color: white;
 }
 
 .project i:hover {
     color: var(--fire-red);
-    animation: cool-rotation 1s forwards;
-}
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: calc(70px + .5vmax);
-    }
+    transform: rotate(360deg);
 }
