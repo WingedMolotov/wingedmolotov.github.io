@@ -97,6 +97,7 @@ h2 {
     display: inline-block;
     padding: .42vw;
     border-radius: 2.5px;
+    overflow: hidden;
 }
 
 h3 {
