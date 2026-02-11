@@ -89,12 +89,12 @@ h2 {
 
 #projects-container > h2 {
     margin: 0;
-    margin-bottom: .5vmax;
+    margin-bottom: 1.5vmax;
 }
 
 .project {
-    width: 20vmax;
-    display: block;
+    width: 40vmax;
+    display: inline-block;
     padding: .65vmax;
     border-radius: 5px;
     overflow: hidden;
@@ -114,15 +114,19 @@ p {
 }
 
 #p1 {
-    background-image: url("images/ImpactGREEN.png");
+    background-image: url("images/southtown.jpg");
 }
 
 #p2 {
-    background-image: url("images/bikeparkmap.png");
+    background-image: url("images/nicollet.jpg");
 }
 
 #p3 {
-    background-image: url("images/southtown.jpg");
+    background-image: url("images/elections.jpg");
+}
+
+#p4 {
+    background-image: url("images/infra.png");
 }
 
 .project a {
@@ -130,7 +134,7 @@ p {
 }
 
 @keyframes backdrop-change {
-    from { backdrop-filter: brightness(65%) blur(4px); }
+    from { backdrop-filter: brightness(50%) blur(4px); }
     to { backdrop-filter: brightness(80%) blur(0px); }
 }
 
@@ -140,7 +144,7 @@ p {
 }
 
 .project::after {
-    backdrop-filter: brightness(65%) blur(4px);
+    backdrop-filter: brightness(50%) blur(4px);
     content: "";
     display: block;
     position: absolute;
@@ -152,6 +156,7 @@ p {
 
 .project:hover::after {
     animation: backdrop-change 1s forwards;
+    animation-delay: 1s;
 }
 
 .project > h3,
