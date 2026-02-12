@@ -178,8 +178,8 @@ a {
 }
 
 #icons i {
-    margin-right: .5vmax;
-    margin-left: .5vmax;
+    margin-right: .4vmax;
+    margin-left: .4vmax;
     transition: 1.5s color;
     color: white;
     transition: transform 1s;
